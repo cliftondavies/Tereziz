@@ -1,7 +1,8 @@
 function nav() {
   const div = document.createElement('div');
-  const nav = document.createElement('nav');
-  nav.classList.add('navbar');
+  div.classList.add('nav-wrap');
+
+  // const nav = document.createElement('nav');
 
   const createRadioInput = (id) => {
     const input = document.createElement('input');
@@ -15,29 +16,29 @@ function nav() {
   homeRadioBtn.setAttribute('checked', '');
   const menuRadioBtn = createRadioInput('menu');
   const contactRadioBtn = createRadioInput('contact');
-  nav.appendChild(homeRadioBtn);
-  nav.appendChild(menuRadioBtn);
-  nav.appendChild(contactRadioBtn);
+  div.appendChild(homeRadioBtn);
+  div.appendChild(menuRadioBtn);
+  div.appendChild(contactRadioBtn);
 
-  const ul = document.createElement('ul');
+  const nav = document.createElement('nav');
 
   const createNavListItem = (forValue, labelText) => {
-    const li = document.createElement('li');
+    // const li = document.createElement('li');
     const label = document.createElement('label');
     label.setAttribute('for', forValue);
     label.textContent = labelText;
-    li.appendChild(label);
-    return li;
+    // li.appendChild(label);
+    return label;
   };
 
   const homeTab = createNavListItem('home', 'Home');
   const menuTab = createNavListItem('menu', 'Menu');
   const contactTab = createNavListItem('contact', 'Contact');
-  ul.appendChild(homeTab);
-  ul.appendChild(menuTab);
-  ul.appendChild(contactTab);
+  nav.appendChild(homeTab);
+  nav.appendChild(menuTab);
+  nav.appendChild(contactTab);
 
-  nav.appendChild(ul);
+  // nav.appendChild(ul);
   div.appendChild(nav);
 
   return div; // append div to div#content in here or in index.js?
