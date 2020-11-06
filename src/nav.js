@@ -1,3 +1,6 @@
+import './assets/css/reset.css';
+import './assets/css/style.css';
+
 function nav() {
   const div = document.createElement('div');
   div.classList.add('nav-wrap');
