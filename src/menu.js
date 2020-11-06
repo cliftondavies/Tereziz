@@ -65,7 +65,8 @@ function menu() {
   divTwo.appendChild(section);
   div.appendChild(divTwo);
 
-  return div; // append div to div#content in here or in index.js?
+  document.querySelector('#content').appendChild(div);
+  // return div; // append div to div#content in here or in index.js?
 }
 
 export default menu;
