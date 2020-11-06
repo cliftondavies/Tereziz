@@ -2,8 +2,6 @@ function nav() {
   const div = document.createElement('div');
   div.classList.add('nav-wrap');
 
-  // const nav = document.createElement('nav');
-
   const createRadioInput = (id) => {
     const input = document.createElement('input');
     input.setAttribute('type', 'radio');
@@ -23,11 +21,9 @@ function nav() {
   const nav = document.createElement('nav');
 
   const createNavListItem = (forValue, labelText) => {
-    // const li = document.createElement('li');
     const label = document.createElement('label');
     label.setAttribute('for', forValue);
     label.textContent = labelText;
-    // li.appendChild(label);
     return label;
   };
 
@@ -38,7 +34,6 @@ function nav() {
   nav.appendChild(menuTab);
   nav.appendChild(contactTab);
 
-  // nav.appendChild(ul);
   div.appendChild(nav);
 
   return div; // append div to div#content in here or in index.js?

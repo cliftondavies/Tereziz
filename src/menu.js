@@ -4,16 +4,16 @@ function menu() {
 
   const divTwo = document.createElement('div');
 
-  const createHeading = (headingTag, headingText) => {
-    const heading = document.createElement(headingTag);
-    heading.textContent = headingText;
-    return heading;
+  const buildElement = (elementTag, elementText) => {
+    const element = document.createElement(elementTag);
+    element.textContent = elementText;
+    return element;
   };
 
-  const h2 = createHeading('h2', 'Our Menu');
-  const h3 = createHeading('h3', 'OUR DELICIOUS DISHES');
-  const p = document.createElement('p');
-  p.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+  const h2 = buildElement('h2', 'Our Menu');
+  const h3 = buildElement('h3', 'OUR DELICIOUS DISHES');
+  const p = buildElement('p',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
   divTwo.appendChild(h2);
   divTwo.appendChild(h3);
   divTwo.appendChild(p);
@@ -24,16 +24,13 @@ function menu() {
     const div = document.createElement('div');
 
     const divTwo = document.createElement('div');
-    const h4 = document.createElement('h4');
-    h4.textContent = dishName;
-    const p = document.createElement('p');
-    p.textContent = description;
+    const h4 = buildElement('h4', dishName);
+    const p = buildElement('p', description);
     divTwo.appendChild(h4);
     divTwo.appendChild(p);
     div.appendChild(divTwo);
 
-    const span = document.createElement('span');
-    span.textContent = price;
+    const span = buildElement('span', price);
     div.appendChild(span);
 
     return div;
@@ -68,7 +65,7 @@ function menu() {
   divTwo.appendChild(section);
   div.appendChild(divTwo);
 
-  return div;
+  return div; // append div to div#content in here or in index.js?
 }
 
 export default menu;
