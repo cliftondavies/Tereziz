@@ -23,8 +23,8 @@ function home() {
 
   div.appendChild(divTwo);
 
-  document.querySelector('#content').appendChild(div);
-  // return div; // append div to div#content in here or in index.js?
+  // document.querySelector('#content').appendChild(div);
+  return div; // append div to div#content in here or in index.js?
 }
 
 export default home;

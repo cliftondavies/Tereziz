@@ -2,6 +2,7 @@ import './assets/css/reset.css';
 import './assets/css/style.css';
 
 function nav() {
+  const content = document.querySelector('#content');
   const div = document.createElement('div');
   div.classList.add('nav-wrap');
 
@@ -17,9 +18,9 @@ function nav() {
   homeRadioBtn.setAttribute('checked', '');
   const menuRadioBtn = createRadioInput('menu');
   const contactRadioBtn = createRadioInput('contact');
-  div.appendChild(homeRadioBtn);
-  div.appendChild(menuRadioBtn);
-  div.appendChild(contactRadioBtn);
+  content.appendChild(homeRadioBtn);
+  content.appendChild(menuRadioBtn);
+  content.appendChild(contactRadioBtn);
 
   const nav = document.createElement('nav');
 
@@ -39,8 +40,8 @@ function nav() {
 
   div.appendChild(nav);
 
-  document.querySelector('#content').appendChild(div);
-  // return div; // append div to div#content in here or in index.js?
+  // document.querySelector('#content').appendChild(div);
+  return div; // append div to div#content in here or in index.js?
 }
 
 export default nav;

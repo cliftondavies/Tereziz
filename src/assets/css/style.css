@@ -1,0 +1,46 @@
+#content {
+  position: relative;
+  height: 100vh;
+  background: yellow;
+}
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: greenyellow;
+}
+
+#home,
+#menu,
+#contact {
+  position: absolute;
+  left: -9999px;
+}
+
+.home-wrap {
+  background: blueviolet;
+}
+
+.menu-wrap {
+  background: rgb(226, 64, 43);
+}
+
+.contact-wrap {
+  background: rgb(43, 205, 226);
+}
+
+.home-wrap,
+.menu-wrap,
+.contact-wrap {
+  display: none;
+  height: 100vh;
+}
+
+#home:checked ~ .home-wrap,
+#menu:checked ~ .menu-wrap,
+#contact:checked ~ .contact-wrap {
+  display: block;
+  /* transform: scale(1);
+  transition-delay: .5s;  */
+}
