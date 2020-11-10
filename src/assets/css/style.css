@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@500;700;900&display=swap');
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
 #content {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: yellow;
+  color: #fff;
 }
 
 .nav-wrap {
   position: fixed;
   width: 100%;
+  padding: 15px 0;
   text-align: center;
-  background: greenyellow;
+  background: rgba(0, 0, 0, .3);
 }
 
 #home,
@@ -18,16 +26,30 @@
   left: -9999px;
 }
 
-.home-wrap {
-  background: blueviolet;
+.nav-wrap > nav {
+  display: flex;
+  justify-content: space-around;
 }
 
-.menu-wrap {
-  background: rgb(226, 64, 43);
+.nav-wrap label {
+  cursor: pointer;
 }
 
-.contact-wrap {
-  background: rgb(43, 205, 226);
+.nav-wrap label[for="menu"],
+.nav-wrap label[for="contact"] {
+  margin-left: 25px;
+  font: 700 14px/1.8 "Inter", sans-serif;
+  transition: border-bottom 1s ease-in-out;
+}
+
+.nav-wrap label[for="menu"]:hover,
+.nav-wrap label[for="contact"]:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-wrap label[for="home"] {
+  font: 700 18px "Dancing Script", cursive;
+  border-bottom: 2px solid #fff;
 }
 
 .home-wrap,
@@ -41,6 +63,121 @@
 #menu:checked ~ .menu-wrap,
 #contact:checked ~ .contact-wrap {
   display: block;
-  /* transform: scale(1);
-  transition-delay: .5s;  */
+}
+
+.home-wrap {
+  background: rgba(0, 0, 0, .8) url('../images/coffee.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+}
+
+.home-wrap > div,
+.menu-wrap > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.home-wrap h2 {
+  margin-bottom: 5px;
+  font: 700 35px "Dancing Script", cursive;
+  color: #ecb494;
+}
+
+.home-wrap h1 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  font: 900 35px "Inter", sans-serif;
+}
+
+.home-wrap h3 {
+  font: 500 15px "Inter", sans-serif;
+}
+
+.menu-wrap,
+.contact-wrap {
+  padding-top: 80px;
+  background: rgba(0, 0, 0, .85) url('../images/platter.jpg') center 70%/cover no-repeat;
+  background-blend-mode: overlay;
+}
+
+.menu-wrap > div,
+.contact-wrap > div {
+  justify-content: flex-start;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.menu-wrap h2,
+.contact-wrap h2 {
+  margin-bottom: 50px;
+  font: 700 40px "Dancing Script", cursive;
+}
+
+.menu-wrap h2::after,
+.contact-wrap h2::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.menu-wrap h3,
+.contact-wrap h3 {
+  margin-bottom: 18px;
+  font: 700 16px "Inter", sans-serif;
+}
+
+.menu-wrap > div > p,
+.contact-wrap > div p {
+  margin-bottom: 30px;
+  font: 500 13px/1.8 "Inter", sans-serif;
+  text-align: center;
+  color: #d3d3d3;
+}
+
+.menu-wrap section {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.menu-wrap section > div {
+  margin-bottom: 40px;
+}
+
+.menu-wrap .name-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: .1px solid #d3d3d3;
+  padding-bottom: 10px;
+}
+
+.menu-wrap section h4,
+.menu-wrap section span,
+.contact-wrap h4 {
+  font: 700 14px "Inter", sans-serif;
+}
+
+.menu-wrap section p,
+.contact-wrap span {
+  font: 500 13px "Inter", sans-serif;
+  color: #d3d3d3;
+}
+
+.contact-wrap {
+  background: rgba(0, 0, 0, .85) url('../images/shrimp.jpg') center 65%/cover no-repeat;
+  text-align: center;
+}
+
+.contact-wrap > div > div {
+  margin-bottom: 30px;
+}
+
+.contact-wrap h4 {
+  margin-bottom: 10px;
 }
