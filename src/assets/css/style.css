@@ -16,7 +16,7 @@
   width: 100%;
   padding: 15px 0;
   text-align: center;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 #home,
@@ -66,7 +66,7 @@
 }
 
 .home-wrap {
-  background: rgba(0, 0, 0, .8) url('../images/coffee.jpg') center/cover no-repeat;
+  background: rgba(0, 0, 0, 0.8) url('../images/coffee.jpg') center/cover no-repeat;
   background-blend-mode: overlay;
 }
 
@@ -98,7 +98,7 @@
 .menu-wrap,
 .contact-wrap {
   padding-top: 80px;
-  background: rgba(0, 0, 0, .85) url('../images/platter.jpg') center 70%/cover no-repeat;
+  background: rgba(0, 0, 0, 0.85) url('../images/platter.jpg') center 70%/cover no-repeat;
   background-blend-mode: overlay;
 }
 
@@ -153,7 +153,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  border-bottom: .1px solid #d3d3d3;
+  border-bottom: 0.1px solid #d3d3d3;
   padding-bottom: 10px;
 }
 
@@ -170,7 +170,7 @@
 }
 
 .contact-wrap {
-  background: rgba(0, 0, 0, .85) url('../images/shrimp.jpg') center 65%/cover no-repeat;
+  background: rgba(0, 0, 0, 0.85) url('../images/shrimp.jpg') center 65%/cover no-repeat;
   text-align: center;
 }
 
