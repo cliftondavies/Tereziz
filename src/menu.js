@@ -1,7 +1,7 @@
 import './assets/css/reset.css';
 import './assets/css/style.css';
 
-function menu() {
+const menu = () => {
   const div = document.createElement('div');
   div.classList.add('menu-wrap');
 
@@ -16,7 +16,8 @@ function menu() {
   const h2 = buildElement('h2', 'Our Menu');
   const h3 = buildElement('h3', 'OUR DELICIOUS DISHES');
   const p = buildElement('p',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Eiusmod tempor incididunt ut labore et dolore magna aliqua.`);
   divTwo.appendChild(h2);
   divTwo.appendChild(h3);
   divTwo.appendChild(p);
@@ -27,35 +28,36 @@ function menu() {
     const div = document.createElement('div');
 
     const divTwo = document.createElement('div');
+    divTwo.classList.add('name-price');
     const h4 = buildElement('h4', dishName);
-    const p = buildElement('p', description);
+    const span = buildElement('span', price);
     divTwo.appendChild(h4);
-    divTwo.appendChild(p);
+    divTwo.appendChild(span);
     div.appendChild(divTwo);
 
-    const span = buildElement('span', price);
-    div.appendChild(span);
+    const p = buildElement('p', description);
+    div.appendChild(p);
 
     return div;
   };
 
   const firstDish = createMenuItem('YORKSHIRE LAMB PATTIES',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£17');
   const secondDish = createMenuItem('SWEET POTATO FRIES',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£35');
   const thirdDish = createMenuItem('STUFFED JACKET POTATOES',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£23');
   const fourthDish = createMenuItem('GRILLED CITRUS FISH',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£46');
   const fifthDish = createMenuItem('CORN AND MANGO SALAD',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£17');
   const sixthDish = createMenuItem('CHICKEN PIE',
-    'Adipiscing elit duis tristique sollicitudin nibh sit amet.',
+    'Adipiscing elit duis tristique sollicitudin nibh sit amet curam.',
     '£24');
 
   section.appendChild(firstDish);
@@ -68,8 +70,7 @@ function menu() {
   divTwo.appendChild(section);
   div.appendChild(divTwo);
 
-  // document.querySelector('#content').appendChild(div);
-  return div; // append div to div#content in here or in index.js?
-}
+  document.querySelector('#content').appendChild(div);
+};
 
-export default menu;
+export { menu as default };

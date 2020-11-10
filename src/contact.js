@@ -1,7 +1,7 @@
 import './assets/css/reset.css';
 import './assets/css/style.css';
 
-function contact() {
+const contact = () => {
   const div = document.createElement('div');
   div.classList.add('contact-wrap');
 
@@ -16,7 +16,8 @@ function contact() {
   const h2 = buildElement('h2', 'Contact Us');
   const h3 = buildElement('h3', 'HOW TO GET IN TOUCH?');
   const p = buildElement('p',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Eiusmod tempor incididunt ut labore et dolore magna aliqua.`);
   divTwo.appendChild(h2);
   divTwo.appendChild(h3);
   divTwo.appendChild(p);
@@ -40,8 +41,7 @@ function contact() {
 
   div.appendChild(divTwo);
 
-  // document.querySelector('#content').appendChild(div);
-  return div; // append div to div#content in here or in index.js?
-}
+  document.querySelector('#content').appendChild(div);
+};
 
-export default contact;
+export { contact as default };

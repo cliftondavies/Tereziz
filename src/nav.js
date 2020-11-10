@@ -1,7 +1,7 @@
 import './assets/css/reset.css';
 import './assets/css/style.css';
 
-function nav() {
+const nav = () => {
   const content = document.querySelector('#content');
   const div = document.createElement('div');
   div.classList.add('nav-wrap');
@@ -14,7 +14,7 @@ function nav() {
     return input;
   };
 
-  const homeRadioBtn = createRadioInput('home'); // checked at start?
+  const homeRadioBtn = createRadioInput('home');
   homeRadioBtn.setAttribute('checked', '');
   const menuRadioBtn = createRadioInput('menu');
   const contactRadioBtn = createRadioInput('contact');
@@ -31,17 +31,18 @@ function nav() {
     return label;
   };
 
-  const homeTab = createNavListItem('home', 'Home');
-  const menuTab = createNavListItem('menu', 'Menu');
-  const contactTab = createNavListItem('contact', 'Contact');
+  const homeTab = createNavListItem('home', 'CAFE TEREZIE');
+  const divTwo = document.createElement('div');
+  const menuTab = createNavListItem('menu', 'MENU');
+  const contactTab = createNavListItem('contact', 'CONTACT');
   nav.appendChild(homeTab);
-  nav.appendChild(menuTab);
-  nav.appendChild(contactTab);
+  divTwo.appendChild(menuTab);
+  divTwo.appendChild(contactTab);
+  nav.appendChild(divTwo);
 
   div.appendChild(nav);
 
-  // document.querySelector('#content').appendChild(div);
-  return div; // append div to div#content in here or in index.js?
-}
+  content.appendChild(div);
+};
 
-export default nav;
+export { nav as default };
