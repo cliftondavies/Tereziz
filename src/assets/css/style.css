@@ -111,7 +111,7 @@
 
 .menu-wrap h2,
 .contact-wrap h2 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font: 700 40px "Dancing Script", cursive;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .menu-wrap section > div {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .menu-wrap .name-price {

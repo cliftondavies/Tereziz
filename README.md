@@ -6,7 +6,7 @@
 
 ## :tv: Media
 
-[Live Demo Link](https://rawcdn.githack.com/cliftondavies/Restaurant/d38392c7a6d5d03f75c05042b0dd82969b837ed7/dist/index.html)
+[Live Demo Link](https://raw.githack.com/cliftondavies/Restaurant/restaurant_mvp/dist/index.html)
 
 ## :toolbox: Tools & Technologies Used
 
@@ -23,9 +23,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Install [Node with npm](https://nodejs.org/en/download/)
+Install [Node.js with npm](https://nodejs.org/en/download/)
 
-Install [Webpack](https://webpack.js.org/guides/getting-started/)
+Install [webpack](https://webpack.js.org/guides/getting-started/)
 
 ### Set up
 
