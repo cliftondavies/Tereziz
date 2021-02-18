@@ -6,7 +6,7 @@
 
 ## :tv: Media
 
-[Live Demo Link](https://rawcdn.githack.com/cliftondavies/Restaurant/e798ded668a490dc66123594407d8da16faed6cd/dist/index.html)
+[Live Demo Link](https://tereziz.netlify.app/)
 
 ## :toolbox: Tools & Technologies Used
 
