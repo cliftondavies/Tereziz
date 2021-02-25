@@ -1,6 +1,3 @@
-import './assets/css/reset.css';
-import './assets/css/style.css';
-
 const nav = () => {
   const content = document.querySelector('#content');
   const div = document.createElement('div');
