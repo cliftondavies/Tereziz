@@ -1,6 +1,3 @@
-import './assets/css/reset.css';
-import './assets/css/style.css';
-
 const contact = () => {
   const div = document.createElement('div');
   div.classList.add('contact-wrap');
