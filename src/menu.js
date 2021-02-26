@@ -1,6 +1,3 @@
-import './assets/css/reset.css';
-import './assets/css/style.css';
-
 const menu = () => {
   const div = document.createElement('div');
   div.classList.add('menu-wrap');
